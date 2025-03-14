@@ -4,6 +4,8 @@
 
 package hu.szamalk.ehcararend;
 
+import hu.szamalk.model.KupacRend;
+
 /**
  *
  * @author SzabóRoland(SZF_2023

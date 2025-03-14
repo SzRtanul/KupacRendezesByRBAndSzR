@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package hu.szamalk.ehcararend;
+package hu.szamalk.model;
 
 /**
  *
@@ -14,7 +14,7 @@ public class KupacRend {
         for (int k = items.length, c = 1; k >= 0; k--, c++) {
             for (int i = (k/2)-1; i >= 0; i--) {
                // System.out.println("i: "+i);
-                for (int j = 0; j < 2; j++) {
+                for (int j = 1; j <= 2; j++) {
                     //System.out.println("j: " + j);
                    // System.out.println("Keplet: " + (int)(2 * i + j));
                     temp = items[i];
