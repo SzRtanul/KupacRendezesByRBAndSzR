@@ -11,10 +11,10 @@ package hu.szamalk.ehcararend;
 public class EhCaraRend {
 
     public static void main(String[] args) {
-        int[] items = new int[]{133,13,73,52,66,2,78,99,42,5};
+        int[] items = new int[]{133,13,73,52,66,2,78,99,42,5,6};
         megjelenit(items);
         System.out.println("");
-        items = maxKupac(items);
+        items = KupacRend.maxKupac(items);
         System.out.println("");
         megjelenit(items);
     }
@@ -23,26 +23,5 @@ public class EhCaraRend {
         for (int item : items) {
             System.out.println(item);
         }
-    }
-    
-    public static int[] maxKupac(int[] items){
-        int temp;
-        for (int k = items.length, c = 1; k >= 0; k--, c++) {
-            for (int i = (k/2)-1; i >= 0; i--) {
-               // System.out.println("i: "+i);
-                for (int j = 0; j < 2; j++) {
-                    //System.out.println("j: " + j);
-                   // System.out.println("Keplet: " + (int)(2 * i + j));
-                    temp = items[i];
-                    boolean b = items[i] < items[2*i+j];
-                    items[i] = b ? items[2*i+j] : items[i];
-                    items[2*i+j] = b ? temp : items[2*i+j];
-                }
-                temp = items[0];
-                items[0] = items[items.length-c];
-                items[items.length-c] = temp;
-            }
-        }
-        return items;
     }
 }
