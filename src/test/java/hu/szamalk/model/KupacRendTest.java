@@ -34,11 +34,7 @@ public class KupacRendTest {
     @MethodSource("provideArrays")
     void testArrays(int[] input) {
         input = KupacRend.maxKupac(input);
-        for (int i = 0; i < input.length; i++) {
-            System.out.println(input[i]);
-        }
         for (int i = 0; i < input.length-1; i++) {
-            System.out.println("YEEEE: "+input[i]);
             Assertions.assertEquals(input[i] <= input[i+1], true);
         }
     }
