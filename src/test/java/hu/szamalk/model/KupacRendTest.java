@@ -19,8 +19,14 @@ public class KupacRendTest {
     
     static Stream<int[]> provideArrays() {
         return Stream.of(
+            new int[0],
+            new int[]{1},
+            new int[]{1,2},
+            new int[]{2,1},
+            new int[]{3,2,1},  
             new int[]{1, 2, 3},
-            new int[]{4, 5, 66, 5, 4, Integer.MAX_VALUE, Integer.MIN_VALUE}
+            new int[]{4, 5, 66, 5, 4, Integer.MAX_VALUE, Integer.MIN_VALUE},
+            new int[]{133,13,73,52,66,2,78,99,42,5,6}
         );
     }
 
